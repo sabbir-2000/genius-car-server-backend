@@ -53,6 +53,9 @@ async function run() {
             const services = await cursor.toArray();
             res.send(services);
         })
+        app.get('/hero', (req, res) => {
+            res.send('hero baba acho kemon')
+        })
 
         app.get('/service/:id', async (req, res) => {
             const id = req.params.id;
